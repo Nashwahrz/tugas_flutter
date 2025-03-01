@@ -3,8 +3,11 @@ import 'package:tugas_mobile/Screen/page_cache_image.dart';
 import 'package:tugas_mobile/Screen/page_dua.dart';
 import 'package:tugas_mobile/Screen/page_empat.dart';
 import 'package:tugas_mobile/Screen/page_gambar.dart';
+import 'package:tugas_mobile/Screen/page_list.dart';
+import 'package:tugas_mobile/Screen/page_notif.dart';
 
 import 'package:tugas_mobile/Screen/page_satu.dart';
+import 'package:tugas_mobile/Screen/page_simple_login.dart';
 import 'package:tugas_mobile/Screen/page_tiga.dart';
 import 'package:tugas_mobile/Screen/page_url_image.dart';
 
@@ -182,6 +185,64 @@ class PageOne extends StatelessWidget {
                 style: TextStyle(fontSize: 14, color: Colors.white),
               ),
             ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageNotif()),
+                );
+              },
+              color: Colors.brown[900], // Warna tombol
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15), // Lengkungan sudut
+              ),
+              elevation: 5, // Efek bayangan default
+              hoverElevation: 12, // Meningkatkan bayangan saat hover (khusus desktop)
+              child: Text(
+                'Page Notif',
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageList()),
+                );
+              },
+              color: Colors.green[900], // Warna tombol
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15), // Lengkungan sudut
+              ),
+              elevation: 5, // Efek bayangan default
+              hoverElevation: 12, // Meningkatkan bayangan saat hover (khusus desktop)
+              child: Text(
+                'Page List',
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+
+            MaterialButton(
+              onPressed: () {
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageSimpleLogin()),
+                );
+              },
+              color: Colors.red[900], // Warna tombol
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15), // Lengkungan sudut
+              ),
+              elevation: 5, // Efek bayangan
+              hoverElevation: 12, // Meningkatkan bayangan saat hover (khusus desktop)
+              child: Text(
+                'Page Login',
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            )
+
+
 
 
           ],
