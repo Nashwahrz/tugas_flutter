@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_mobile/Screen/page_cache_image.dart';
 import 'package:tugas_mobile/Screen/page_dua.dart';
 import 'package:tugas_mobile/Screen/page_empat.dart';
+import 'package:tugas_mobile/Screen/page_gambar.dart';
 
 import 'package:tugas_mobile/Screen/page_satu.dart';
 import 'package:tugas_mobile/Screen/page_tiga.dart';
+import 'package:tugas_mobile/Screen/page_url_image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -117,12 +120,69 @@ class PageOne extends StatelessWidget {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => PageEmpat()));
               },
-              color: Colors.blue,
+              color: Colors.brown[800],
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15), // Mengatur lengkungan sudut
+              ),
               child: Text(
                 'Page 4',
                 style: TextStyle(fontSize: 14, color: Colors.white),
               ),
             ),
+
+            MaterialButton(
+              onPressed: () {
+                //ini untuk pindah page
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PageGambar()));
+              },
+              color: Colors.purple,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15), // Mengatur lengkungan sudut
+              ),
+              child: Text(
+                'Page Gambar',
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageUrl()),
+                );
+              },
+              color: Colors.red[900], // Warna tombol
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15), // Lengkungan sudut
+              ),
+              elevation: 5, // Efek bayangan default
+              hoverElevation: 12, // Meningkatkan bayangan saat hover (khusus desktop)
+              child: Text(
+                'Page Url',
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageChache()),
+                );
+              },
+              color: Colors.pink[900], // Warna tombol
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15), // Lengkungan sudut
+              ),
+              elevation: 5, // Efek bayangan default
+              hoverElevation: 12, // Meningkatkan bayangan saat hover (khusus desktop)
+              child: Text(
+                'Page Cache',
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+
 
           ],
         ),
