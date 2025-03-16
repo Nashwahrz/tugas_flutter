@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_mobile/Screen/latihan_form/latihan_form.dart';
+import 'package:tugas_mobile/Screen/latihan_form/page_tab.dart';
+import 'package:tugas_mobile/Screen/navbar/page_tab_bar.dart';
 import 'package:tugas_mobile/Screen/page_cache_image.dart';
 import 'package:tugas_mobile/Screen/page_dua.dart';
 import 'package:tugas_mobile/Screen/page_empat.dart';
@@ -69,7 +72,7 @@ class PageOne extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Selamat Datang di Flutter App pertama Mi2b Nashwa Harzathi"),
+            Text("Selamat Datang di Flutter App pertama Mi2b"),
             MaterialButton(
               onPressed: () {
                 //ini untuk pindah page
@@ -238,6 +241,46 @@ class PageOne extends StatelessWidget {
               hoverElevation: 12, // Meningkatkan bayangan saat hover (khusus desktop)
               child: Text(
                 'Page Login',
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+
+            MaterialButton(
+              onPressed: () {
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageTabBar()),
+                );
+              },
+              color: Colors.red[900], // Warna tombol
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15), // Lengkungan sudut
+              ),
+              elevation: 5, // Efek bayangan
+              hoverElevation: 12, // Meningkatkan bayangan saat hover (khusus desktop)
+              child: Text(
+                'Tab Bar',
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            ),
+
+            MaterialButton(
+              onPressed: () {
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageTab()),
+                );
+              },
+              color: Colors.red[900], // Warna tombol
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15), // Lengkungan sudut
+              ),
+              elevation: 5, // Efek bayangan
+              hoverElevation: 12, // Meningkatkan bayangan saat hover (khusus desktop)
+              child: Text(
+                'Tab Dosen',
                 style: TextStyle(fontSize: 14, color: Colors.white),
               ),
             )
